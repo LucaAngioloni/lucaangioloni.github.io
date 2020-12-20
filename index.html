@@ -11,36 +11,55 @@
 	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="css/luca.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="imgs/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="imgs/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="imgs/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="imgs/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="imgs/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="imgs/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="imgs/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="imgs/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="imgs/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="imgs/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
+	<link rel="manifest" href="imgs/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="imgs/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-		<a class="navbar-brand brand" href="#"><img src="imgs/LA.svg" class="signature white"></a>
+		<a id="logo" class="navbar-brand brand"><img src="imgs/LA.svg" class="signature white"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="#about">About</a>
+					<a class="nav-link" name="#about">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#education">Education</a>
+					<a class="nav-link" name="#education">Education</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#research">Research</a>
+					<a class="nav-link" name="#research">Research</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#publications">Publications</a>
+					<a class="nav-link" name="#publications">Publications</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#experience">Experience</a>
+					<a class="nav-link" name="#experience">Experience</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#awards">Awards</a>
+					<a class="nav-link" name="#awards">Awards</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#contact">Contact</a>
+					<a class="nav-link" name="#contact">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -390,9 +409,18 @@
 	<script src="js/bootstrap.bundle.min.js"></script>
 
 	<!-- This script collapses the navbar automatically when a link is clicked (small screens) -->
+	<!-- It also does scroll to #id -->
 	<script type="text/javascript">
-		$('.navbar-nav>li>a').on('click', function(){
+		$(".nav-link").click(function() {
 			$('.navbar-collapse').collapse('hide');
+		    const section_id = this.name;
+		    $('html, body').animate({
+		        scrollTop: $(section_id).offset().top
+		    }, 1500);
+		});
+
+		$("#logo").click(function() {
+			$('html, body').animate({ scrollTop: 0 }, 1500);
 		});
 	</script>
 </body>
