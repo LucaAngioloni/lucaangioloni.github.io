@@ -1,52 +1,58 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 300;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Crimson Text', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Crimson Text", serif;
 }
 
-html,body {
-	height:100%;
-	margin:0;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 .navbar {
-	font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 .content {
-	height:100%;
-	min-height:100%;/*for mozilla*/
+  height: 100%;
+  min-height: 100%; /*for mozilla*/
 }
 
-html>body .content {
-	height:auto;
+html > body .content {
+  height: auto;
 }
 
 .brand {
-	text-align: center;
-	font-family: "abril-text";
+  text-align: center;
+  font-family: "abril-text";
 }
 
-.title { 
-	position: center;
-	font-size: 60px;
-	text-align: center;
-	font-family: "abril-text";
+.title {
+  position: center;
+  font-size: 60px;
+  text-align: center;
+  font-family: "abril-text";
 }
 
 .subtitle {
-	margin: 0 0 10px;
-	font-size: 28px;
-	font-weight: 600;
-	text-align: center;
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .nounderline {
@@ -56,16 +62,16 @@ html>body .content {
 }
 
 .centered {
-    text-align: center;
+  text-align: center;
 }
 
 .right {
-    text-align: right;
+  text-align: right;
 }
 
 section {
-	padding-top: 70px;
-	padding-bottom: 10px;
+  padding-top: 70px;
+  padding-bottom: 10px;
 }
 
 /*.about {
@@ -79,22 +85,23 @@ section {
 }
 
 .center-text {
-	padding-left: 30px;
-	padding-right: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .signature {
-	height: 1.5em;
+  height: 1.5em;
 }
 
 .white {
-	filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(10deg) brightness(100%) contrast(105%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(10deg) brightness(100%)
+    contrast(105%);
 }
 
 .dark {
-	background-color: #151f2b;
+  background-color: #151f2b;
 }
 
-#footwrap{
-	padding-bottom: 50px;
+#footwrap {
+  padding-bottom: 50px;
 }
