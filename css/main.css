@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* To make the signature white for dark themes  */
+.dark .signature-white {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(10deg) brightness(100%)
+    contrast(105%);
+}
+
+@layer components {
+  .menu-element {
+    @apply border-transparent hover:border-gray-300 hover:text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white px-3 py-2 rounded-md text-base font-medium;
+  }
+
+  .mobile-menu-item {
+    @apply border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium;
+  }
+}
