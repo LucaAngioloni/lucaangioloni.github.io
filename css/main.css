@@ -20,4 +20,8 @@
   .card {
     @apply my-6 flex flex-col md:flex-row justify-between rounded-lg shadow-lg bg-white dark:bg-gray-800;
   }
+
+  .button {
+    @apply self-center mx-2 my-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-lg shadow-lg px-4 py-4;
+  }
 }
