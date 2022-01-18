@@ -4,6 +4,7 @@
   "description": "My personal website",
   "scripts": {
     "build": "postcss css/main.css -o dist/main.css",
+    "allow-dist": "sed '/dist/d' .gitignore > tmpfile && mv tmpfile .gitignore",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
