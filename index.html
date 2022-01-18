@@ -2,608 +2,740 @@
 <html>
   <head>
     <title>Luca Angioloni</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <!-- SEO -->
     <meta
       name="Description"
-      content="Personal website of Luca Angioloni: Computer Engineer / Researcher"
+      content="Personal website of Luca Angioloni: CTO @ Aidia - Founder, Machine Learning Engineer, Computer Engineer."
     />
     <meta name="og:type" content="website" />
     <meta name="og:title" content="Luca Angioloni" />
     <meta
       name="og:description"
-      content="Personal website of Luca Angioloni: Computer Engineer / Researcher"
+      content="Personal website of Luca Angioloni: CTO @ Aidia - Founder, Machine Learning Engineer, Computer Engineer."
     />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Luca Angioloni" />
     <meta
       name="twitter:description"
-      content="Personal website of Luca Angioloni: Computer Engineer / Researcher"
+      content="Personal website of Luca Angioloni: CTO @ Aidia - Founder, Machine Learning Engineer, Computer Engineer."
     />
     <!-- /SEO -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/main.css" rel="stylesheet" />
+    <!-- /CSS -->
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/bootstrap.min.superhero.css" />
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="css/luca.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
+    <!-- Dark Mode -->
+    <script>
+      // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <!-- /Dark Mode -->
 
     <!-- Favicons -->
     <link
       rel="apple-touch-icon"
       sizes="57x57"
-      href="imgs/favicon/apple-icon-57x57.png"
+      href="/imgs/favicon/apple-icon-57x57.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="60x60"
-      href="imgs/favicon/apple-icon-60x60.png"
+      href="/imgs/favicon/apple-icon-60x60.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="72x72"
-      href="imgs/favicon/apple-icon-72x72.png"
+      href="/imgs/favicon/apple-icon-72x72.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="76x76"
-      href="imgs/favicon/apple-icon-76x76.png"
+      href="/imgs/favicon/apple-icon-76x76.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="114x114"
-      href="imgs/favicon/apple-icon-114x114.png"
+      href="/imgs/favicon/apple-icon-114x114.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="120x120"
-      href="imgs/favicon/apple-icon-120x120.png"
+      href="/imgs/favicon/apple-icon-120x120.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="144x144"
-      href="imgs/favicon/apple-icon-144x144.png"
+      href="/imgs/favicon/apple-icon-144x144.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="152x152"
-      href="imgs/favicon/apple-icon-152x152.png"
+      href="/imgs/favicon/apple-icon-152x152.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="imgs/favicon/apple-icon-180x180.png"
+      href="/imgs/favicon/apple-icon-180x180.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="imgs/favicon/android-icon-192x192.png"
+      href="/imgs/favicon/android-icon-192x192.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="imgs/favicon/favicon-32x32.png"
+      href="/imgs/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="96x96"
-      href="imgs/favicon/favicon-96x96.png"
+      href="/imgs/favicon/favicon-96x96.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="imgs/favicon/favicon-16x16.png"
+      href="/imgs/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="imgs/favicon/manifest.json" />
+    <link rel="manifest" href="/imgs/favicon/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta
       name="msapplication-TileImage"
-      content="imgs/favicon/ms-icon-144x144.png"
+      content="/imgs/favicon/ms-icon-144x144.png"
     />
     <meta name="theme-color" content="#ffffff" />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-      <a id="logo" class="navbar-brand brand"
-        ><img src="imgs/LA.svg" class="signature white"
-      /></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#collapsibleNavbar"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" name="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" name="#work">Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" name="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" name="#research">Research</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" name="#publications">Publications</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" name="#experience">Experience</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" name="#awards">Awards</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" name="#contact">Contact</a>
-          </li>
-        </ul>
+  <body class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100">
+    <nav class="bg-white shadow dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex justify-between h-16">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button -->
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              onclick="toggleMenu()"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!--
+                Icon when menu is closed.
+
+                Heroicon name: outline/menu
+
+                Menu open: "hidden", Menu closed: "block"
+              -->
+              <svg
+                id="menu-icon-closed"
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <!--
+                Icon when menu is open.
+
+                Heroicon name: outline/x
+
+                Menu open: "block", Menu closed: "hidden"
+              -->
+              <svg
+                id="menu-icon-open"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <div class="flex-shrink-0 flex items-center">
+              <img
+                class="block lg:hidden h-8 w-auto signature-white"
+                src="/imgs/LA.svg"
+                alt="Luca"
+              />
+              <img
+                class="hidden lg:block h-8 w-auto signature-white"
+                src="/imgs/LA.svg"
+                alt="Luca"
+              />
+            </div>
+            <div
+              class="hidden sm:flex sm:ml-6 space-x-4 absolute inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:pr-0"
+            >
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="#about" class="menu-element" aria-current="page"
+                >About</a
+              >
+              <a href="#work" class="menu-element">Work</a>
+              <a href="#education" class="menu-element">Education</a>
+              <a href="#research" class="menu-element">Research</a>
+              <a href="#publications" class="menu-element">Publications</a>
+              <!-- <a href="#awards" class="menu-element">Awards</a> -->
+              <a href="#contacts" class="menu-element">Contacts</a>
+            </div>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <!-- Dark mode switcher -->
+            <button
+              id="theme-toggle"
+              type="button"
+              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+            >
+              <svg
+                id="theme-toggle-dark-icon"
+                class="w-5 h-5 hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+              <svg
+                id="theme-toggle-light-icon"
+                class="w-5 h-5 hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dark mode switcher end -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="hidden sm:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="#about" class="mobile-menu-item">About</a>
+          <a href="#work" class="mobile-menu-item">Work</a>
+          <a href="#education" class="mobile-menu-item">Education</a>
+          <a href="#research" class="mobile-menu-item">Research</a>
+          <a href="#publications" class="mobile-menu-item">Publications</a>
+          <!-- <a href="#awards" class="mobile-menu-item">Awards</a> -->
+          <a href="#contacts" class="mobile-menu-item">Contacts</a>
+        </div>
       </div>
     </nav>
 
-    <!-- Use this if you want to make the Me div to take a full screen first page  -->
-    <!-- <div class="content" id="Me">  -->
-    <div id="Me">
-      <p style="text-align: center">
-        <img
-          class="img-fluid img-profile rounded-circle mx-auto mb-2"
-          src="imgs/profile.jpg"
-          alt=""
-          style="
-            margin-top: 90px;
-            width: 30%;
-            height: auto;
-            max-width: 300px;
-            min-width: 150px;
-          "
-        />
-      </p>
-      <h1 class="title"><img src="imgs/LA.svg" class="signature white" /></h1>
-      <h3 class="subtitle">
+    <section id="me">
+      <img
+        class="rounded-full mx-auto mb-2 w-1/4 max-w-xs my-8 shadow-lg"
+        src="/imgs/profile.jpg"
+        alt="profile picture"
+      />
+      <img src="/imgs/LA.svg" class="signature-white h-20 mx-auto my-4" />
+      <h3 class="text-center text-2xl">
         CTO @ Aidia - Founder, Machine Learning Engineer, Computer Engineer.
       </h3>
-      <div class="container h-100" style="margin-top: 30px">
-        <div class="row h-100 justify-content-center align-items-center">
-          <ul class="list-inline">
+      <div class="h-full mt-7">
+        <div class="flex h-full justify-center mx-auto">
+          <ul class="inline-flex justify-center align-middle">
             <!-- <li class="list-inline-item"><a class="nounderline" href="https://www.facebook.com/lucaangioloni"><i class="fab fa-facebook-f"></i></a></li>
 					<li class="list-inline-item"><a class="nounderline" href="https://twitter.com/LucaAngioloni"><i class="fab fa-twitter"></i></a></li> -->
-            <li class="list-inline-item">
-              <a class="nounderline" href="mailto:lucaangioloni@gmail.com"
-                ><i class="fas fa-envelope"></i
-              ></a>
+            <li class="mx-4">
+              <a href="mailto:lucaangioloni@gmail.com"
+                ><img src="/imgs/icons/email.svg" class="h-16"
+              /></a>
             </li>
-            <li class="list-inline-item">
-              <a class="nounderline" href="https://github.com/LucaAngioloni"
-                ><i class="fab fa-github"></i
-              ></a>
+            <li class="mx-4">
+              <a href="https://github.com/LucaAngioloni"
+                ><img src="/imgs/icons/github.svg" class="h-16"
+              /></a>
             </li>
-            <li class="list-inline-item">
-              <a
-                class="nounderline"
-                href="https://www.linkedin.com/in/luca-angioloni-634a48b8/"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
+            <li class="mx-4">
+              <a href="https://www.linkedin.com/in/luca-angioloni-634a48b8/"
+                ><img src="/imgs/icons/linkedin.svg" class="h-16"
+              /></a>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-    <section id="about" name="about"></section>
-    <div class="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-2">
-            <h5 class="centered">ABOUT</h5>
+    <section id="about" name="about" class="my-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-400"></div>
           </div>
-          <div class="col-lg-8 center-text">
+          <div class="relative flex justify-center">
+            <span class="px-3 text-xl font-medium bg-gray-100 dark:bg-gray-700">
+              About
+            </span>
+          </div>
+        </div>
+        <div class="card">
+          <p class="self-center mx-8 my-6">
+            I am a Computer Engineer, Founder and Researcher. I love to work
+            with challenging problems, especially in the field of Machine
+            Learning or Signal Processing. I also love Music, Photography and
+            travelling.
+          </p>
+          <button class="button w-80">
+            <a href="/resume/Resume.pdf" target="_blank" class="inline-flex">
+              <img
+                src="/imgs/icons/file.svg"
+                class="signature-white h-7 mx-1 self-center"
+              />
+              <span class="mx-1">Download Resume</span>
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK SECTION -->
+    <section id="work" name="work" class="my-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-400"></div>
+          </div>
+          <div class="relative flex justify-center">
+            <span class="px-3 text-xl font-medium bg-gray-100 dark:bg-gray-700">
+              Work
+            </span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="self-center mx-8 my-6">
             <p>
-              I am a Computer Engineer, Founder and Researcher. I love to work
-              with challenging problems, especially in the field of Machine
-              Learning or Signal Processing. I also love Music, Photography and
-              travelling.
+              <strong class="font-bold text-xl">AIDIA SRL</strong><br />
+              CTO & Founder <br />
+            </p>
+            <p class="mt-4">
+              <more
+                >AI and ML models development, Machine Learning. <br />
+                Manager and Team Lead. <br />Microservices architecture and
+                platforms. <br />Big Data.</more
+              >
             </p>
           </div>
-          <div class="col-lg-2 center-text">
+          <div class="self-center mx-8 my-6 w-80">
+            <p class="text-center md:text-right">
+              <sm
+                >Oct 2021 - Now <br />
+                Florence, Italy
+              </sm>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" name="education" class="my-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-400"></div>
+          </div>
+          <div class="relative flex justify-center">
+            <span class="px-3 text-xl font-medium bg-gray-100 dark:bg-gray-700">
+              Education
+            </span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="self-center mx-8 my-6">
             <p>
-              <a href="resume/Resume.pdf" target="_blank"
-                ><i class="far fa-file"></i> <sm>DOWNLOAD RESUME</sm></a
+              <strong class="font-bold text-xl">UNIVERSITY OF FLORENCE</strong
+              ><br />
+              Doctor of Philosophy - PhD in Smart Computing
+              <br /><i>AI Lab</i> <br /><i>Advisor: Prof. Paolo Frasconi</i>
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6 w-80">
+            <p class="text-center md:text-right">
+              <sm>From Nov 2019</sm><br />
+              <imp><sm>Florence, Italy</sm></imp>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="self-center mx-8 my-6">
+            <p>
+              <strong class="font-bold text-xl">UNIVERSITY OF FLORENCE</strong
+              ><br />
+              MEng in Computer Engineering
+              <br /><i>Vote: 110/110 Magna Cum Laude</i>
+            </p>
+            <p class="mt-4">
+              <i
+                >Thesis title: "RFMLS: Radio Frequency Machine Learning
+                System"</i
+              >
+              <br /><i
+                >Thesis supervisors: Stratis Ioannidis, Paolo Frasconi, Andrew
+                D. Bagdanov.</i
+              >
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6 w-80">
+            <p class="text-center md:text-right">
+              <sm>Apr 2019</sm><br />
+              <imp><sm>Florence, Italy</sm></imp>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="self-center mx-8 my-6">
+            <p>
+              <strong class="font-bold text-xl">UNIVERSITY OF FLORENCE</strong
+              ><br />
+              BS in Computer Engineering
+              <br /><i>Vote: 102/110</i>
+            </p>
+            <p class="mt-4">
+              <i
+                >Thesis title: "Recognition techniques and their application to
+                the control of moving systems through embedded platforms"</i
+              >
+              <br /><i>Thesis supervisor: Fabrizio Argenti.</i>
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6 w-80">
+            <p class="text-center md:text-right">
+              <sm>Nov 2016</sm><br />
+              <imp><sm>Florence, Italy</sm></imp>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH SECTION -->
+    <section id="research" name="research" class="my-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-400"></div>
+          </div>
+          <div class="relative flex justify-center">
+            <span class="px-3 text-xl font-medium bg-gray-100 dark:bg-gray-700">
+              Research
+            </span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="self-center mx-8 my-6">
+            <p>
+              <strong class="font-bold text-xl">UNIVERSITY OF FLORENCE</strong
+              ><br />
+              Researcher
+            </p>
+            <p class="mt-4">
+              <more
+                >I collaborate with Prof. Paolo Frasconi and Dr. Valentijn
+                Borghuis in the design, training, and evaluation of innovative
+                generative models and algorithms to generate music genre
+                interpolations and other forms of autonomous music production.
+                Generative models are unsupervised learning techniques that
+                allow one to sample data points from a distribution inferred
+                from a training set. Prominent exampes that have received
+                significant attention in recent years include generative
+                adversarial networks and various kinds of autoencoders. The goal
+                of this research project is the application of Wasserstein
+                autoencoders to the generation of MIDI musical patterns starting
+                from proprietary data made available by the contractor
+                Borgflocken B.V.</more
+              >
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6 w-80">
+            <p class="text-center md:text-right">
+              <sm
+                >May&nbsp2019&nbsp-&nbspOct&nbsp2019<br />
+                Florence, Italy</sm
               >
             </p>
           </div>
         </div>
-        <br />
-        <hr />
-      </div>
-    </div>
-
-    <!-- WORK SECTION -->
-    <section id="work" name="work"></section>
-    <div class="container desc">
-      <div class="row padded">
-        <div class="col-lg-2">
-          <h5 class="centered">WORK</h5>
+        <div class="card">
+          <div class="self-center mx-8 my-6">
+            <p>
+              <strong class="font-bold text-xl"
+                >NORTHEASTERN UNIVERSITY - SPIRAL LAB</strong
+              ><br />
+              Researcher
+            </p>
+            <p class="mt-4">
+              <more
+                >Worked with Machine Learning and Signal Processing on a DARPA
+                project called RFMLS (Radio Frequency Machine Learning System),
+                in order to identify wireless devices based only on raw RF
+                transmissions with thousands of devices. Designed the Neural
+                Network Architecture used for the identification task and helped
+                develop the signal processing system needed to extract the right
+                features.</more
+              >
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6 w-80">
+            <p class="text-center md:text-right">
+              <sm
+                >Sep&nbsp2018&nbsp-&nbspJan&nbsp2019<br />
+                Boston, MA, USA</sm
+              >
+            </p>
+          </div>
         </div>
-        <div class="col-lg-8 center-text">
-          <p class="tight">
-            <strong style="font-weight: 600">AIDIA SRL</strong><br />
-            CTO & Founder <br />
-          </p>
-          <p>
-            <more
-              >AI and ML models development, Machine Learning. <br />
-              Manager and Team Lead. <br />Microservices architecture and
-              platforms. <br />Big Data.</more
-            >
-          </p>
-        </div>
-        <div class="col-lg-2 center-text">
-          <p>
-            <sm
-              >Oct 2021 - Now <br />
-              Florence, Italy
-            </sm>
-          </p>
-        </div>
-      </div>
-      <br />
-      <hr />
-    </div>
-
-    <!-- EDUCATION SECTION -->
-    <section id="education" name="education"></section>
-    <div class="container desc">
-      <div class="row padded">
-        <div class="col-lg-2">
-          <h5 class="centered">EDUCATION</h5>
-        </div>
-        <div class="col-lg-8 center-text">
-          <p>
-            <strong style="font-weight: 600">UNIVERSITY OF FLORENCE</strong
-            ><br />
-            Doctor of Philosophy - PhD in Smart Computing
-            <br /><i>AI Lab</i> <br /><i>Advisor: Prof. Paolo Frasconi</i>
-          </p>
-        </div>
-        <div class="col-lg-2 center-text">
-          <p>
-            <sm>From Nov 2019</sm><br />
-            <imp><sm>Florence, Italy</sm></imp>
-          </p>
+        <div class="card">
+          <div class="self-center mx-8 my-6">
+            <p>
+              <strong class="font-bold text-xl">UNIVERSITY OF FLORENCE</strong
+              ><br />
+              Researcher (Research Scholarship)
+            </p>
+            <p class="mt-4">
+              <more
+                >Worked on the ”Development of compression and denoising
+                algorithms for images from AS-OCT” project, financed by C.S.O.
+                S.r.l. Designed a custom and efficient compression and denoising
+                algorithm specifically for AS-OCT images and implemented it (C++
+                No Libraries).</more
+              >
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6 w-80">
+            <p class="text-center md:text-right">
+              <sm
+                >Jul&nbsp2017&nbsp-&nbspMar&nbsp2018<br />
+                Florence, Italy</sm
+              >
+            </p>
+          </div>
         </div>
       </div>
-      <div class="row padded">
-        <div class="col-lg-2">
-          <h5 class="centered"></h5>
-        </div>
-        <div class="col-lg-8 center-text">
-          <p>
-            <strong style="font-weight: 600">UNIVERSITY OF FLORENCE</strong
-            ><br />
-            MEng in Computer Engineering
-            <br /><i>Vote: 110/110 Magna Cum Laude</i><br />
-            <br /><i
-              >Thesis title: "RFMLS: Radio Frequency Machine Learning System"</i
-            >
-            <br /><i
-              >Thesis supervisors: Stratis Ioannidis, Paolo Frasconi, Andrew D.
-              Bagdanov.</i
-            >
-          </p>
-        </div>
-        <div class="col-lg-2 center-text">
-          <p>
-            <sm>Apr 2019</sm><br />
-            <imp><sm>Florence, Italy</sm></imp>
-          </p>
-        </div>
-      </div>
-      <div class="row padded">
-        <div class="col-lg-2">
-          <h5 class="centered"></h5>
-        </div>
-        <div class="col-lg-8 center-text">
-          <p>
-            <strong style="font-weight: 600">UNIVERSITY OF FLORENCE</strong
-            ><br />
-            BS in Computer Engineering
-            <br /><i>Vote: 102/110</i><br />
-            <br /><i
-              >Thesis title: "Recognition techniques and their application to
-              the control of moving systems through embedded platforms"</i
-            >
-            <br /><i>Thesis supervisor: Fabrizio Argenti</i>
-          </p>
-        </div>
-        <div class="col-lg-2 center-text">
-          <p>
-            <sm>Nov 2016</sm><br />
-            <imp><sm>Florence, Italy</sm></imp>
-          </p>
-        </div>
-      </div>
-      <br />
-      <hr />
-    </div>
-
-    <!-- RESEARCH SECTION -->
-    <section id="research" name="research"></section>
-    <div class="container desc">
-      <div class="row padded">
-        <div class="col-lg-2">
-          <h5 class="centered">RESEARCH</h5>
-        </div>
-        <div class="col-lg-8 center-text">
-          <p class="tight">
-            <strong style="font-weight: 600">UNIVERSITY OF FLORENCE</strong
-            ><br />
-            Researcher <br />
-          </p>
-          <p>
-            <more
-              >I collaborate with Prof. Paolo Frasconi and Dr. Valentijn
-              Borghuis in the design, training, and evaluation of innovative
-              generative models and algorithms to generate music genre
-              interpolations and other forms of autonomous music production.
-              Generative models are unsupervised learning techniques that allow
-              one to sample data points from a distribution inferred from a
-              training set. Prominent exampes that have received significant
-              attention in recent years include generative adversarial networks
-              and various kinds of autoencoders. The goal of this research
-              project is the application of Wasserstein autoencoders to the
-              generation of MIDI musical patterns starting from proprietary data
-              made available by the contractor Borgflocken B.V.</more
-            >
-          </p>
-        </div>
-        <div class="col-lg-2 center-text">
-          <p>
-            <sm
-              >May 2019 - Oct 2019<br />
-              Florence, Italy</sm
-            >
-          </p>
-        </div>
-      </div>
-      <div class="row padded">
-        <div class="col-lg-2">
-          <h5 class="centered"></h5>
-        </div>
-        <div class="col-lg-8 center-text">
-          <p class="tight">
-            <strong style="font-weight: 600"
-              >NORTHEASTERN UNIVERSITY - SPIRAL LAB</strong
-            ><br />
-            Researcher <br />
-          </p>
-          <p>
-            <more
-              >Worked with Machine Learning and Signal Processing on a DARPA
-              project called RFMLS (Radio Frequency Machine Learning System), in
-              order to identify wireless devices based only on raw RF
-              transmissions with thousands of devices. Designed the Neural
-              Network Architecture used for the identification task and helped
-              develop the signal processing system needed to extract the right
-              features.</more
-            >
-          </p>
-        </div>
-        <div class="col-lg-2 center-text">
-          <p>
-            <sm
-              >Sep 2018 - Jan 2019<br />
-              Boston, MA, USA</sm
-            >
-          </p>
-        </div>
-      </div>
-      <div class="row padded">
-        <div class="col-lg-2">
-          <h5 class="centered"></h5>
-        </div>
-        <div class="col-lg-8 center-text">
-          <p class="tight">
-            <strong style="font-weight: 600">UNIVERSITY OF FLORENCE</strong
-            ><br />
-            Researcher (Research Scholarship) <br />
-          </p>
-          <p>
-            <more
-              >Worked on the ”Development of compression and denoising
-              algorithms for images from AS-OCT” project, financed by C.S.O.
-              S.r.l. Designed a custom and efficient compression and denoising
-              algorithm specifically for AS-OCT images and implemented it (C++
-              No Libraries)</more
-            >
-          </p>
-        </div>
-        <div class="col-lg-2 center-text">
-          <p>
-            <sm
-              >Jul 2017 – Mar 2018<br />
-              Florence, Italy</sm
-            >
-          </p>
-        </div>
-      </div>
-      <br />
-      <hr />
-    </div>
+    </section>
 
     <!-- PUBLICATIONS SECTION -->
-    <section id="publications" name="publications"></section>
-    <div class="container desc">
-      <div class="row padded">
-        <div class="col-lg-2">
-          <h5 class="centered">PUBLICATIONS</h5>
+    <section id="publications" name="publications" class="my-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-400"></div>
+          </div>
+          <div class="relative flex justify-center">
+            <span class="px-3 text-xl font-medium bg-gray-100 dark:bg-gray-700">
+              Publications
+            </span>
+          </div>
         </div>
-        <div class="col-lg-8 center-text">
-          <p class="tight">
-            <strong style="font-weight: 600"
-              >Conlon: a Pseudo-song Generator Based on a New Pianoroll,
-              Wasserstein Autoencoders, and Optimal Interpolations</strong
-            ><br />
-          </p>
-          <p>
-            <more
-              >Luca Angioloni, Valentijn Borghuis, Lorenzo Brusci, Paolo
-              Frasconi</more
-            >
-          </p>
-          <p>
-            <more
-              ><i
-                >Proceedings of the 21st International Society for Music
-                Information Retrieval Conference</i
-              ></more
-            >
-          </p>
-          <p>
-            <more
-              ><a href="https://program.ismir2020.net/poster_6-14.html"
-                >ISMIR Proceedings</a
-              ></more
-            >
-          </p>
+        <div class="card">
+          <div class="self-center mx-8 my-6 flex-1">
+            <p>
+              <strong class="font-bold text-xl"
+                >Conlon: a Pseudo-song Generator Based on a New Pianoroll,
+                Wasserstein Autoencoders, and Optimal Interpolations</strong
+              >
+            </p>
+            <p class="mt-4">
+              <more
+                >Luca Angioloni, Valentijn Borghuis, Lorenzo Brusci, Paolo
+                Frasconi</more
+              >
+            </p>
+            <p class="mt-4">
+              <more
+                ><i
+                  >Proceedings of the 21st International Society for Music
+                  Information Retrieval Conference</i
+                ></more
+              >
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6">
+            <p class="mt-4 text-center md:text-right">
+              <button class="button">
+                <a
+                  href="https://program.ismir2020.net/poster_6-14.html"
+                  target="_blank"
+                  >ISMIR Proceedings</a
+                >
+              </button>
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6" style="flex: 0 0 70px">
+            <p class="text-center md:text-right">
+              <sm>2020</sm>
+            </p>
+          </div>
         </div>
-        <div class="col-lg-2 center-text">
-          <p><sm>2020</sm></p>
+        <div class="card">
+          <div class="self-center mx-8 my-6 flex-1">
+            <p>
+              <strong class="font-bold text-xl"
+                >Pattern-Based Music Generation with Wasserstein Autoencoders
+                and PRC Descriptions</strong
+              >
+            </p>
+            <p class="mt-4">
+              <more
+                >Valentijn Borghuis, Luca Angioloni, Lorenzo Brusci, Paolo
+                Frasconi</more
+              >
+            </p>
+            <p class="mt-4">
+              <more
+                ><i
+                  >29th International Joint Conference on Artificial
+                  Intelligence</i
+                ></more
+              >
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6">
+            <p class="mt-4 text-center md:text-right">
+              <button class="button">
+                <a
+                  href="https://www.ijcai.org/Proceedings/2020/0751.pdf"
+                  target="_blank"
+                  >IJCAI Proceedings</a
+                >
+              </button>
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6" style="flex: 0 0 70px">
+            <p class="text-center md:text-right">
+              <sm>2020</sm>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="self-center mx-8 my-6 flex-1">
+            <p>
+              <strong class="font-bold text-xl"
+                >DeepRadioID: Real-Time Channel-Resilient Optimization of Deep
+                Learning-based Radio Fingerprinting Algorithms</strong
+              >
+            </p>
+            <p class="mt-4">
+              <more
+                >Restuccia, Francesco and D'Oro, Salvatore and Al-Shawabka,
+                Amani and Belgiovine, Mauro and Angioloni, Luca and Ioannidis,
+                Stratis and Chowdhury, Kaushik and Melodia, Tommaso</more
+              >
+            </p>
+            <p class="mt-4">
+              <more
+                ><i
+                  >Proceedings of the Twentieth ACM International Symposium on
+                  Mobile Ad Hoc Networking and Computing</i
+                ></more
+              >
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6">
+            <p class="mt-4 text-center md:text-right">
+              <button class="button">
+                <a href="https://arxiv.org/abs/1904.07623" target="_blank"
+                  >arXiv preprint</a
+                >
+              </button>
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6" style="flex: 0 0 70px">
+            <p class="text-center md:text-right">
+              <sm>2019</sm>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="self-center mx-8 my-6 flex-1">
+            <p>
+              <strong class="font-bold text-xl"
+                >No Radio Left Behind: Radio Fingerprinting Through Deep
+                Learning of Physical-Layer Hardware Impairments</strong
+              >
+            </p>
+            <p class="mt-4">
+              <more
+                >Sankhe, Kunal and Belgiovine, Mauro and Zhou, Fan and
+                Angioloni, Luca and Restuccia, Francesco and D'Oro, Salvatore
+                and Melodia, Tommaso and Ioannidis, Stratis and Chowdhury,
+                Kaushik</more
+              >
+            </p>
+            <p class="mt-4">
+              <more
+                ><i
+                  >IEEE Transactions on Cognitive Communications and
+                  Networking</i
+                ></more
+              >
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6">
+            <p class="mt-4 text-center md:text-right">
+              <button class="button">
+                <a
+                  href="https://ece.northeastern.edu/wineslab/papers/SankheIEEETCCN2019.pdf"
+                  target="_blank"
+                  >NEU preprint</a
+                >
+              </button>
+            </p>
+          </div>
+          <div class="self-center mx-8 my-6" style="flex: 0 0 70px">
+            <p class="text-center md:text-right">
+              <sm>2019</sm>
+            </p>
+          </div>
         </div>
       </div>
-      <div class="row padded">
-        <div class="col-lg-2">
-          <h5 class="centered"></h5>
-        </div>
-        <div class="col-lg-8 center-text">
-          <p class="tight">
-            <strong style="font-weight: 600"
-              >Pattern-Based Music Generation with Wasserstein Autoencoders and
-              PRC Descriptions</strong
-            ><br />
-          </p>
-          <p>
-            <more
-              >Valentijn Borghuis, Luca Angioloni, Lorenzo Brusci, Paolo
-              Frasconi</more
-            >
-          </p>
-          <p>
-            <more
-              ><i
-                >29th International Joint Conference on Artificial
-                Intelligence</i
-              ></more
-            >
-          </p>
-          <p>
-            <more
-              ><a href="https://www.ijcai.org/Proceedings/2020/0751.pdf"
-                >IJCAI Proceedings</a
-              ></more
-            >
-          </p>
-        </div>
-        <div class="col-lg-2 center-text">
-          <p><sm>2020</sm></p>
-        </div>
-      </div>
-      <div class="row padded">
-        <div class="col-lg-2">
-          <h5 class="centered"></h5>
-        </div>
-        <div class="col-lg-8 center-text">
-          <p class="tight">
-            <strong style="font-weight: 600"
-              >DeepRadioID: Real-Time Channel-Resilient Optimization of Deep
-              Learning-based Radio Fingerprinting Algorithms</strong
-            ><br />
-          </p>
-          <p>
-            <more
-              >Restuccia, Francesco and D'Oro, Salvatore and Al-Shawabka, Amani
-              and Belgiovine, Mauro and Angioloni, Luca and Ioannidis, Stratis
-              and Chowdhury, Kaushik and Melodia, Tommaso</more
-            >
-          </p>
-          <p>
-            <more
-              ><i
-                >Proceedings of the Twentieth ACM International Symposium on
-                Mobile Ad Hoc Networking and Computing</i
-              ></more
-            >
-          </p>
-          <p>
-            <more
-              ><a href="https://arxiv.org/abs/1904.07623"
-                >arXiv preprint arXiv:1904.07623</a
-              ></more
-            >
-          </p>
-        </div>
-        <div class="col-lg-2 center-text">
-          <p><sm>2019</sm></p>
-        </div>
-      </div>
-      <div class="row padded">
-        <div class="col-lg-2">
-          <h5 class="centered"></h5>
-        </div>
-        <div class="col-lg-8 center-text">
-          <p class="tight">
-            <strong style="font-weight: 600"
-              >No Radio Left Behind: Radio Fingerprinting Through Deep Learning
-              of Physical-Layer Hardware Impairments</strong
-            ><br />
-          </p>
-          <p>
-            <more
-              >Sankhe, Kunal and Belgiovine, Mauro and Zhou, Fan and Angioloni,
-              Luca and Restuccia, Francesco and D’Oro, Salvatore and Melodia,
-              Tommaso and Ioannidis, Stratis and Chowdhury, Kaushik</more
-            >
-          </p>
-          <p>
-            <more
-              ><i
-                >IEEE Transactions on Cognitive Communications and Networking</i
-              ></more
-            >
-          </p>
-          <p>
-            <more
-              ><a
-                href="https://ece.northeastern.edu/wineslab/papers/SankheIEEETCCN2019.pdf"
-                >NEU preprint</a
-              ></more
-            >
-          </p>
-        </div>
-        <div class="col-lg-2 center-text">
-          <p><sm>2019</sm></p>
-        </div>
-      </div>
-      <br />
-      <hr />
-    </div>
+    </section>
 
     <!-- EXPERIENCE SECTION -->
     <!-- <section id="experience" name="experience"></section>
@@ -665,7 +797,7 @@
     </div> -->
 
     <!-- AWARDS SECTION -->
-    <section id="awards" name="awards"></section>
+    <!-- <section id="awards" name="awards"></section>
     <div class="container desc">
       <div class="row padded">
         <div class="col-lg-2">
@@ -694,81 +826,80 @@
       </div>
       <br />
       <hr />
-    </div>
+    </div> -->
 
-    <section id="contact" name="contact" class="dark"></section>
-    <!--FOOTER DESCRIPTION -->
-    <div id="footwrap" class="footer dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-2">
-            <h5 class="centered">CONTACT</h5>
-          </div>
-          <div class="col-lg-7 center-text">
+    <section
+      id="contacts"
+      name="contacts"
+      class="bg-white dark:bg-gray-800 shadow-lg h-full py-10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
+        <div class="flex flex-col md:flex-row justify-between my-10">
+          <div class="self-center mx-8 my-6 min-w-min">
             <p>
-              <strong style="font-weight: 600">Email</strong><br />
+              <strong class="text-xl font-semibold">Email</strong><br />
               <a
                 href="mailto:lucaangioloni@gmail.com"
                 target="_blank"
-                class="mail"
-                ><i class="fas fa-envelope"></i> lucaangioloni@gmail.com</a
-              ><br />
+                class="text-orange-500 dark:text-orange-400 inline-flex my-2"
+                ><img
+                  src="/imgs/icons/email.svg"
+                  class="h-4 mx-2 self-center"
+                />
+                lucaangioloni@gmail.com</a
+              >
+              <br />
               <a
                 href="mailto:luca.angioloni@aidia.it"
                 target="_blank"
-                class="mail"
-                ><i class="fas fa-envelope"></i> luca.angioloni@aidia.it</a
+                class="text-orange-500 dark:text-orange-400 inline-flex my-2"
+                ><img
+                  src="/imgs/icons/email.svg"
+                  class="h-4 mx-2 self-center"
+                />
+                luca.angioloni@aidia.it</a
               ><br />
             </p>
-            <p>
-              <strong style="font-weight: 600">Address</strong><br />
-              Via Tre Olmi 14 <br />
-              Bibbiena, AR 52011 <br />
-              Italy<br />
-            </p>
-            <!-- <p><strong style="font-weight: 600;">Phone</strong><br/>
-						<a href="tel:2345678901" class="tel">(234) 567-8901</a> <br/>
-					</p> -->
           </div>
-          <div class="col-lg-3">
-            <p class="centered"><sm>LINKS</sm></p>
-            <p class="centered">
-              <!-- EDIT: Social Links. Replace # with your URL for each -->
-              <a href="https://github.com/LucaAngioloni" target="_blank"
-                ><i class="fab fa-github"></i> Github://LucaAngioloni</a
+          <div class="self-center mx-8 my-6 min-w-min">
+            <strong class="text-xl font-semibold my-2">Address</strong><br />
+            <div class="my-2">
+              Via Tre Olmi, 14<br />
+              Bibbiena (AR), 52011<br />
+              Italy<br />
+            </div>
+          </div>
+          <div class="self-center mx-8 my-6 min-w-min">
+            <p>
+              <strong class="text-xl font-semibold">Links</strong><br />
+              <a
+                href="https://github.com/LucaAngioloni"
+                target="_blank"
+                class="text-orange-500 dark:text-orange-400 inline-flex my-2"
+                ><img
+                  src="/imgs/icons/github.svg"
+                  class="h-4 mx-2 self-center"
+                />
+                Github://LucaAngioloni</a
               ><br />
               <a
                 href="https://www.linkedin.com/in/luca-angioloni-634a48b8/"
                 target="_blank"
-                ><i class="fab fa-linkedin-in"></i> LinkedIn://Luca Angioloni</a
+                class="text-orange-500 dark:text-orange-400 inline-flex my-2"
+                ><img
+                  src="/imgs/icons/linkedin.svg"
+                  class="h-4 mx-2 self-center"
+                />
+                LinkedIn://Luca Angioloni</a
               >
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Scripts -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-
-    <!-- This script collapses the navbar automatically when a link is clicked (small screens) -->
-    <!-- It also does scroll to #id -->
-    <script type="text/javascript">
-      $(".nav-link").click(function () {
-        $(".navbar-collapse").collapse("hide");
-        const section_id = this.name;
-        $("html, body").animate(
-          {
-            scrollTop: $(section_id).offset().top,
-          },
-          1500
-        );
-      });
-
-      $("#logo").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, 1500);
-      });
-    </script>
+    <script src="/js/dark.js"></script>
+    <script src="/js/menu.js"></script>
   </body>
 </html>
