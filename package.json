@@ -1,0 +1,29 @@
+{
+  "name": "lucaangioloni.github.io",
+  "version": "2.0.0",
+  "description": "My personal website",
+  "scripts": {
+    "build": "postcss css/main.css -o dist/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucaAngioloni/lucaangioloni.github.io.git"
+  },
+  "author": "Luca Angioloni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LucaAngioloni/lucaangioloni.github.io/issues"
+  },
+  "homepage": "https://github.com/LucaAngioloni/lucaangioloni.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.15",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.15"
+  }
+}
