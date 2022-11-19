@@ -15,8 +15,14 @@ const emails = [
     id: "mail_gmail",
     name: "lucaangioloni",
     domain: "gmail.com",
+    main: true,
   },
 ];
+
+const main_mail = emails.filter((e) => e.main)[0];
+document.getElementById(
+  "main_mail"
+).href = `mailto:${main_mail.name}@${main_mail.domain}`;
 
 emails.forEach((mail) => {
   document.getElementById(mail.id).href = `mailto:${mail.name}@${mail.domain}`;
